@@ -438,9 +438,9 @@ void RSDNeuralNetwork_init (RSDNeuralNetwork_t * RSDNeuralNetwork, RSDCommandLin
 	}	 
 	
 	if(RSDCommandLine->enTF==1)
-		strncpy(RSDNeuralNetwork->pyPath, "sources/tensorflow-sources/NN.py", STRING_SIZE);
+		strncpy(RSDNeuralNetwork->pyPath, "%s/sources/tensorflow-sources/NN.py", STRING_SIZE);
 	else
-		strncpy(RSDNeuralNetwork->pyPath, "sources/pytorch-sources/main.py", STRING_SIZE);	
+		strncpy(RSDNeuralNetwork->pyPath, "%s/sources/pytorch-sources/main.py", STRING_SIZE);	
 	
 	if(RSDCommandLine->opCode==OP_TRAIN_CNN || RSDCommandLine->opCode==OP_TEST_CNN)
 	{	
